@@ -1,0 +1,251 @@
+<!--
+Author: Designmaz
+Author URL: https://www.designmaz.net
+License URL: https://www.designmaz.net/licence/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calendario</title>
+<!--Custom Theme files-->
+<link rel="stylesheet" type="text/css" href="calendario.css">
+<meta charset="utf-8">
+</head>
+<body onload="validarusuario()">
+	<header>
+		<nav>
+			<ul id="navi">
+				<li><a href="calendario.html">Películas disponibles</a></li>
+				<li><a href="nuevapelicula.html">Nueva Película</a></li>
+				<li><a href="nuevousuario.html">Nuevo Usuario</a></li>
+				<li><a href="#" onclick="cerrar()">Cerrar Sesión</a></li>
+			</ul>
+		</nav>
+	</header>
+	<h1>Marzo</h1>
+	<input type="hidden" id="mes" value="3"/>
+	<input type="hidden" id="anno" value="2019"/>
+	<ol class="calendar">
+		  <li class="calendar-day calendar-day--begin-week calendar-day--past calendar-day--not-month" data-weekday="Mon" data-week="39">
+		    <span class="calendar-day__number">26</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past calendar-day--not-month" data-weekday="Tue" data-week="39">
+		    <span class="calendar-day__number">27</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past calendar-day--not-month" data-weekday="Wed" data-week="39">
+		    <span class="calendar-day__number">28</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past calendar-day--entry calendar-day--not-month" data-weekday="Thu" data-week="39">
+		    <span class="calendar-day__number">29</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past calendar-day--not-month" data-weekday="Fri" data-week="39">
+		    <span class="calendar-day__number">30</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past calendar-day--entry" data-weekday="Sat" data-week="39">
+		    <span class="calendar-day__number" id="1">01</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past calendar-day--entry" data-weekday="Sun" data-week="39">
+		    <span class="calendar-day__number" id="2">02</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--begin-week calendar-day--past" data-weekday="Mon" data-week="40">
+		    <span class="calendar-day__number" id="3">03</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past" data-weekday="Tue" data-week="40">
+		    <span class="calendar-day__number" id="4">04</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past" data-weekday="Wed" data-week="40">
+		    <span class="calendar-day__number" id="5">05</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--past" data-weekday="Thu" data-week="40">
+		    <span class="calendar-day__number" id="6">06</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--today" data-weekday="Fri" data-week="40">
+		    <span class="calendar-day__number" id="7">07</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sat" data-week="40">
+		    <span class="calendar-day__number" id="8">08</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--entry" data-weekday="Sun" data-week="40">
+		    <span class="calendar-day__number" id="9">09</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--begin-week calendar-day--entry" data-weekday="Mon" data-week="41">
+		    <span class="calendar-day__number" id="10">10</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--entry" data-weekday="Tue" data-week="41">
+		    <span class="calendar-day__number" id="11">11</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--entry" data-weekday="Wed" data-week="41">
+		    <span class="calendar-day__number" id="12">12</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Thu" data-week="41">
+		    <span class="calendar-day__number" id="13">13</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Fri" data-week="41">
+		    <span class="calendar-day__number" id="14">14</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sat" data-week="41">
+		    <span class="calendar-day__number" id="15">15</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sun" data-week="41">
+		    <span class="calendar-day__number" id="16">16</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--begin-week" data-weekday="Mon" data-week="42">
+		    <span class="calendar-day__number" id="17">17</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Tue" data-week="42">
+		    <span class="calendar-day__number" id="18">18</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Wed" data-week="42">
+		    <span class="calendar-day__number" id="19">19</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Thu" data-week="42">
+		    <span class="calendar-day__number" id="20">20</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Fri" data-week="42">
+		    <span class="calendar-day__number" id="21">21</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sat" data-week="42">
+		    <span class="calendar-day__number" id="22">22</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sun" data-week="42">
+		    <span class="calendar-day__number" id="23">23</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--begin-week" data-weekday="Mon" data-week="43">
+		    <span class="calendar-day__number" id="24">24</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Tue" data-week="43">
+		    <span class="calendar-day__number" id="25">25</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Wed" data-week="43">
+		    <span class="calendar-day__number" id="26">26</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Thu" data-week="43">
+		    <span class="calendar-day__number" id="27">27</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Fri" data-week="43">
+		    <span class="calendar-day__number" id="28">28</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sat" data-week="43">
+		    <span class="calendar-day__number" id="29">29</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day" data-weekday="Sun" data-week="43">
+		    <span class="calendar-day__number" id="30">30</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--begin-week" data-weekday="Mon" data-week="44">
+		    <span class="calendar-day__number" id="31">31</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--not-month" data-weekday="Tue" data-week="44">
+		    <span class="calendar-day__number">01</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--not-month" data-weekday="Wed" data-week="44">
+		    <span class="calendar-day__number">02</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+		  <li class="calendar-day calendar-day--not-month" data-weekday="Thu" data-week="44">
+		    <span class="calendar-day__number">03</span>
+		    <div class="calendar-day__content"></div>
+		  </li>
+	  	<li class="calendar-day calendar-day--not-month" data-weekday="Fri" data-week="44">
+	    	<span class="calendar-day__number">04</span>
+	    	<div class="calendar-day__content"></div>
+	  	</li>
+	  	<li class="calendar-day calendar-day--not-month" data-weekday="Sat" data-week="44">
+	    	<span class="calendar-day__number">05</span>
+	    	<div class="calendar-day__content"></div>
+	  	</li>
+	 	<li class="calendar-day calendar-day--not-month" data-weekday="Sun" data-week="44">
+	    	<span class="calendar-day__number">06</span>
+	    	<div class="calendar-day__content"></div>
+	  	</li>
+	</ol>
+	<script type="text/javascript" src="frontend.js"></script>
+	<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+ 	<script type="text/javascript">
+    function agregaimgdepeliculaaldiv(imgenbase64,iddeldiv,iddelapelicula)  //  Primero llega a la funcion de abajo cargarpeliculasdelmesyanno
+    {
+        document.getElementById(iddeldiv).innerHTML += "<img src='"+imgenbase64+"' height='60px' width='60px' id= "+iddelapelicula+" onclick='cargataquilla(\""+iddelapelicula+"\")'>"; //  El fec dentro del getElementById es porque solo reconoce los numeros y hay que concatenar el fec
+    }
+    
+    function cargarpeliculasdelmesyanno()
+    {
+        let clasepeliculainstanciada = new _Pelicula();
+        clasepeliculainstanciada.peliculaspormesyanno(document.getElementById("mes").value,document.getElementById("anno").value).then(function(response) {
+            
+            for(var elemento in response)
+             {
+                 var fechadelapeliculaactual = new Date(response[elemento].FECHA);
+                 agregaimgdepeliculaaldiv(response[elemento].IMAGEN,fechadelapeliculaactual.getDate() + 1,response[elemento]._id);
+                 
+             }
+                 
+      }, function(error) {
+       console.log(error);
+      });
+         
+  	}
+
+  	function cargataquilla(id)
+    {
+        let clasepeliculainstanciada = new _Pelicula(id);
+        clasepeliculainstanciada.Seleccionarporid().then(function(response) {
+
+			localStorage.setItem("peliculaseleccionada",JSON.stringify(response));
+            location.href="butacas.html";
+		}, function(error) {
+			console.log(error);
+		});
+    }
+     function validarusuario()
+      {
+        if(localStorage.getItem("userlogin")==null){
+            alert("Inicia Sesión");
+            location.href="login.html";
+        }else
+          cargarpeliculasdelmesyanno();
+      }
+    function cerrar()
+      {
+      localStorage.removeItem("userlogin");
+      location.href="login.html";
+      alert("Sesión Cerrada");
+      }
+  	</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Añadir película</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body onload="validarusuario()">
+	<header>
+		<nav>
+			<ul id="navi">
+				<li><a href="calendario.html">Películas disponibles</a></li>
+				<li><a href="nuevapelicula.html">Nueva Película</a></li>
+				<li><a href="nuevousuario.html">Nuevo Usuario</a></li>
+				<li><a href="#" onclick="cerrar()">Cerrar Sesión</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="card">
+		<h1>Agregar usuario</h1>
+		<div class="input-group">
+			<input type="text" id="nombre" class="m-input">
+			<label for="nombre">Nombre</label>
+		</div>
+		<div class="input-group">
+			<input type="text" id="email" class="m-input">
+			<label for="email">Email</label>
+		</div>
+		<div class="input-group">
+			<input type="password" id="contrasena" class="m-input">
+			<label for="contrasena">Contraseña</label>
+		</div>
+		<div class="input-group">
+			<input type="password" id="ccontrasena" class="m-input">
+			<label for="ccontrasena">Confirmar contraseña</label>
+		</div>
+		<div class="input-group">
+			<p>Imagen</p>
+			<input type="file" id="imagen" class="m-input">
+		</div>
+		<div class="input-group">
+			<button class="btn" onclick="validar()">Guardar</button>
+		</div>
+	</div>
+	<div class="footer">
+		<p><em>Thanks for swooping by!</em></p>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+			<rect display="none" fill="#6ABFA3" width="600" height="600" />
+			<g>
+					<path opacity="0.5" fill="#aaa" d="M180.2,569.5c0,14.5,10.3,27,24.5,29.9c2,0.4,4,0.6,6,0.6c12.3,0,23.3-7.3,28.1-18.7
+			l59.8-126.8l10.6,117.4c1.1,14,11.6,25.4,25.4,27.7c1.7,0.3,3.3,0.4,5,0.4c12.2,0,23.2-7.2,28-18.4l229.9-539
+			c3.2-7.5,3.3-15.8,0.3-23.3c-3-7.6-8.8-13.5-16.3-16.7c-3.8-1.6-7.9-2.5-12-2.5c-12.2,0-23.2,7.2-28,18.4l-181.2,426l-10.7-119.8
+			c-1.1-14.1-11.6-25.5-25.5-27.7c-1.6-0.3-3.2-0.4-4.9-0.4c-12.3,0-23.3,7.3-28.1,18.7l-49.7,103V158.3l-61,120.7" />
+					<path fill="#aaa" d="M86.5,500.1l93.7-286.7v65.7l61-120.7V30.5c0-15-10.7-27.6-25.5-30.1c-1.7-0.3-3.4-0.4-5-0.4
+			c-13,0-24.6,8.3-28.8,20.6L1.6,559.6c-4.1,12.1-0.3,25.6,9.7,33.6c5.4,4.4,12.2,6.8,19.2,6.8c5.5,0,11-1.5,15.7-4.4l134-74.5v-71.2
+			L86.5,500.1z" />
+			</g>
+		</svg>
+	</div>
+	<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="administradorfrontend.js"></script>
+	<script type="text/javascript">
+		function validarusuario()
+		  {
+		    if(localStorage.getItem("userlogin")==null){
+		        alert("Inicia Sesión");
+		        location.href="login.html";
+		    }
+		  }
+		function cerrar()
+		  {
+		 	localStorage.removeItem("userlogin");
+		 	location.href="login.html";
+		 	alert("Sesión Cerrada");
+		  }
+	</script>
+	</body>
+</html>
