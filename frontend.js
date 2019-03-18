@@ -40,7 +40,7 @@ class _Pelicula {
           try {
             
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/api/Nuevapelicula');
+            xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/Nuevapelicula');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -69,7 +69,7 @@ class _Pelicula {
           try {
             
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/api/Modificapelicula');
+            xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/Modificapelicula');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -98,7 +98,7 @@ class _Pelicula {
           try {
                  
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/api/Eliminapelicula');
+            xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/Eliminapelicula');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -125,7 +125,7 @@ class _Pelicula {
           try {
                
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/api/seleccionartodos');
+            xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/seleccionartodos');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -157,7 +157,7 @@ class _Pelicula {
         try {
                
           var xhr = new XMLHttpRequest();
-          xhr.open('POST', 'http://localhost:8080/api/seleccionarporfecha');
+          xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/seleccionarporfecha');
           xhr.setRequestHeader('Content-Type', 'application/json');
           xhr.onload = function() {
               if (xhr.status === 200) {
@@ -189,7 +189,7 @@ class _Pelicula {
 
         try {     
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/api/seleccionarpeliculaporid');
+            xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/seleccionarpeliculaporid');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -218,7 +218,7 @@ class _Pelicula {
         // Do the usual XHR stuff 
           try {
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:8080/api/seleccionarpornombre');
+            xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/seleccionarpornombre');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
                 if (xhr.status === 200) {
@@ -242,7 +242,7 @@ class _Pelicula {
       return new Promise(function(resolve,reject){
         try{
           var xhr = new XMLHttpRequest();
-          xhr.open('POST', 'http://localhost:8080/api/seleccionarpelicula');
+          xhr.open('POST', 'https://bebecitaa-ua.herokuapp.com/api/seleccionarpelicula');
           xhr.setRequestHeader('Content-Type','application/json');
           xhr.onload = function(){
             if(xhr.status === 200){
