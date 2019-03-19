@@ -6,7 +6,7 @@ var port = process.env.PORT || 8080; //Elige que todo ocurra en el puerto 8080 y
 
 //mongoose.connect('mongodb://localhost:27017/Taquilla'); //conecta con un servidor de mongo db en un puerto predefinido
 
-mongoose.connect('mongodb://bebesitaa-ua:pass123@ds341825.mlab.com:41825/cedespruebas')
+mongoose.connect('mongodb://bebecitaa-ua:pass123@ds341825.mlab.com:41825/cedespruebas')
 
 var db = mongoose.connection; //guarda en una variable la coneccion al servidor de mongo
 db.on('error', console.error.bind(console, 'MongoDB connection error:')); //En caso de error lo muestra en consola
